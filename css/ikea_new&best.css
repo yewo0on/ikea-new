@@ -1,0 +1,356 @@
+@charset "UTF-8";
+
+*{margin: 0; padding: 0; font-family: 'Pretendard', sans-serif; cursor: url(https://cur.cursors-4u.net/nature/nat-2/nat120.cur), auto;}
+ul{list-style: none;}
+a{color: black; text-decoration: none;}
+img{border: 0; vertical-align: top;}
+button { background: inherit; border:none; box-shadow:none;
+  font-family: 'Pretendard-Regular';
+  border-radius:0; padding:0; overflow:visible; cursor:pointer; }
+
+/* input 기본 스타일 초기화 */
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+}
+/* -----------섹션------------------------------------------------- */
+#section .stock{
+  width: 100%;
+  height: 800px;
+  background-color: #F1F7ED;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 100px;
+}
+#section .stock .left_text{
+  margin-top: 150px;
+  margin-left: 90px;
+}
+#section .stock .left_text h1{
+  font-size: 55px;
+  margin-bottom: 80px;
+  color: rgba(0, 0, 0, 0.815);
+}
+#section .stock .left_text h4{
+  font-size: 35px;
+  margin-bottom: 80px;
+  color: rgba(0, 0, 0, 0.7);
+}
+#section .stock .left_text p{
+  font-size: 18px;
+  color: #646463;
+}
+#section .stock .right_img{
+  margin-top: 100px;
+  margin-right: 30px;
+}
+#section .stock .right_img img{
+  width: 90%; height: 604px;
+}
+/* ----------------------------------------------- */
+#section .chiar{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+#section .chiar .left_img{
+  border-radius: 30px;
+  position: absolute;
+  width: 600px; height: 730px;
+  left: 300px; top: 0;
+  overflow: hidden;
+}
+#section .chiar .left_img img{
+  width: 100%; height: 730px;
+}
+#section .chiar .center_img{
+  height: 447px;
+  box-sizing: border-box;
+  position: absolute;
+  left: 900px; top: 160px;
+}
+#section .chiar .center_img img{
+  width: 100%; height: 350px;
+}
+#section .right_text{
+  position: absolute;
+  right: 250px; top: 0;
+}
+#section .right_text .right_tit h4{
+  color: rgba(255, 0, 0, 0.521);
+  font-size: 18px;
+}
+#section .right_text .right_tit h2{
+  margin: 0px 0 25px 0;
+  font-size: 30px;
+}
+#section .right_text .right_tit h3{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+#section .right_text .line_2{
+  width: 400px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.342);
+  margin: 10px 0;
+}
+
+
+
+#section .right_text .right_tit .vote {
+  display: flex;
+}
+
+#section .right_text .right_tit .vote .star { padding: 1px; }
+
+#section .right_text .right_tit .vote .star::after {
+  content: '☆';
+  color: hsl(54, 100%, 50%);
+  font-size: 25px;
+}
+
+#section .right_text .right_tit .vote .star:hover::after,
+#section .right_text .right_tit .vote .star:has(~ .star:hover)::after,
+#section .right_text .right_tit .vote .star.active::after,
+#section .right_text .right_tit .vote .star:has(~ .star.active)::after {
+  content: '★';
+}
+
+#section .right_text .right_tit .vote .star:hover ~ .star::after {
+  content: '☆';
+}
+
+
+#section .right_text .chiar_color{
+  display: flex;
+  margin-top: 20px;
+  margin-left: -10px;
+}
+#section .right_text .chiar_color li{
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
+#section .right_text .chiar_color img{
+  width: 100%; height: 50px;
+}
+#section .right_text .sell_text{
+  border: 1px solid rgba(128, 128, 128, 0.473);
+  border-radius: 15px;
+}
+#section .right_text .top_txt{
+  border-bottom: 1px solid rgba(128, 128, 128, 0.473);
+  padding-left: 60px;
+  background-image: url(../images/new&best/del.png);
+  background-repeat: no-repeat;
+  background-position: 10px 0px;
+  line-height: 13px;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+#section .right_text .top_txt h4{
+  margin-top: 10px;
+}
+#section .right_text .bottom_txt{
+  padding-left: 60px;
+  background-image: url(../images/new&best/maket.png);
+  background-repeat: no-repeat;
+  background-position: 10px;
+  line-height: 13px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+#section .right_text .but{
+  display: flex;
+  margin-top: 20px;
+  cursor: pointer;
+}
+#section .right_text .but .butt_namber{
+  width: 100px; height: 30px;
+  line-height: 28px;
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid rgb(218, 218, 218);
+  /* box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.452); */
+  border-radius: 20px;
+  margin-right: 20px;
+}
+#section .right_text .but .put_in{
+  width: 300px; height: 30px;
+  color: black;
+  background-color: #ffcf4b;
+  border-radius: 10px;
+  border: 0;
+}
+#section .right_text .but .put_in:hover{
+  background-color: #f8b600;
+  color: #0000008f;
+}
+/* ------------------------------------------------- */
+#section .watch{
+  width: 100%; height: 544px;
+  margin-top: 880px;
+  text-align: center;
+  box-sizing: border-box;
+  position: relative;
+  background-color: #98cb9e;
+}
+#section .watch .circle1{
+  position: absolute;
+  width: 300px; height: 150px;
+  background-color: #ffcf4b;
+  border-radius: 0px 0px 150px 150px;
+  left: 300px; top: 0;
+}
+#section .watch .remp_bg{
+  width: 10%; height: 300px;
+  position: absolute;
+  left: 350px; top: -5px;
+  background-image: url(../images/new&best/nymane-pendant-lamp-white__0485490_pe621551_s51.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#section .watch h4{
+  position: absolute;
+  left: 50%; top: -50px;
+  margin-left: -100px;
+  font-size: 23px;
+  font-weight: normal;
+  margin-top: 150px;
+  color: white;
+}
+#section .watch h4 span{
+  color: rgba(255, 0, 0, 0.63);
+}
+#section .watch h2{
+  position: absolute;
+    left: 50%; top: 130px;
+  margin-left: -180px;
+  font-size: 42px;
+  margin-top: 30px;
+  color: white;
+}
+#section .watch .hour{
+  position: absolute;
+  left:50%; top: 230px;
+  margin-left: -275px;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+#section .watch .hour li{
+  padding-left: 60px;
+  font-size: 24px;
+  color: white;
+}
+#section .watch .hour li span{
+  font-size: 40px;
+  font-weight: bold;
+}
+#section .watch .chiar_bg{
+  width: 12%; height: 350px;
+  position: absolute;
+  right: 390px; bottom: -7px;
+  background-image: url(../images/new&best/Untitled-1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+#section .watch .circle2{
+  position: absolute;
+  width: 300px; height: 150px;
+  background-color: #ffcf4b;
+  border-radius: 150px 150px 0px 0px;
+  right: 350px; bottom: 0;
+}
+#section .watch .watch_bt{
+  width: 150px; height: 40px;
+  position: absolute;
+  bottom: 100px; left: 50%;
+  margin-left: -80px;
+  background-color: #ffcf4b;
+  border: 0px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+#section .watch .watch_bt>a{
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 18px;
+}
+#section .watch .watch_bt:hover{
+background-color: #f8b600;
+}
+#section .watch .watch_bt:hover a{
+  width: 150px; height: 40px;
+  line-height: 42px;
+    border-radius: 50px;
+      display: block;
+    color: #0000008f;
+}
+
+/* ------------------------------------------------------------ */
+#section .best_ti{
+  width: 200px;
+
+  margin: 0 auto;
+  margin-left: 35%;
+  margin-top: 200px;
+  margin-bottom: 70px;
+
+}
+#section .best{
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+#section .best .best_sel{
+  width: 68%;
+  display: flex;
+  text-align: center;
+  /* justify-content: space-around; */
+  margin-left: 180px;
+}
+#section .best .best_sel>li{
+  width: 250px; height: 350px;
+  box-shadow: 0px 1px 7px gray;
+  border-radius: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin-left: 15px;
+}
+#section .best .best_sel>li>.img_line{
+  border-bottom: 1px solid rgba(124, 124, 124, 0.541);
+}
+#section .best .best_sel>li img{
+  width: 50%; 
+  padding: 30px 0;
+}
+#section .best .best_sel>li>.best_txt{
+  height: 250px;
+  background-color: #98cb9e;
+}
+#section .best .best_sel>li .best_txt p{
+  font-size: 14px;
+  padding-top: 25px;
+  text-align: center;
+}
+#section .best .best_sel>li .best_txt span{
+  font-size: 20px;
+  font-weight: bold;
+}
+#section .best .best_sel>li .best_txt h4{
+  font-size: 17px;
+}
+#section .best .bed_img{
+position: absolute;
+right: 180px; top: -110px;
+border-radius: 40px;
+overflow: hidden;
+}
+#section .best .bed_img img{
+  margin-bottom:-5px;
+  width: 470px; height: 470px;
+}

@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IKEA</title>
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon" />
+    <link rel="stylesheet" href="css/ikea_main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/include.js" defer></script>
+    <script>
+$(document).ready(function(){
+
+$(".hero-img img").hide();
+$(".hero-img img").eq(0).show();
+$(".hero-btn-container>div").eq(0).addClass("on");
+
+const bgColors = [
+  '#8DCC71',  
+  '#CBCB1D',  
+  '#B2E0E3',  
+  '#73D165',  
+  '#D2F700'   
+];
+
+$(".hero-btn-container>div").click(function() {
+  let index = $(this).index();
+
+  $(".hero-img img").hide();
+  $(".hero-img img").eq(index).show();
+
+  $(".hero-btn-container>div").removeClass("on");
+  $(this).addClass("on");
+
+  $(".bg-img").css("background-color", bgColors[index]);
+});
+
+        $(function() {
+    let currentIndex = 0;
+    const totalItems = $(".easy-btn-container > div").length;
+
+    function updateView(index) {
+      // 이미지 및 제품 설명 
+      $(".easy-img img").hide().eq(index).show();
+      $(".easy-product > ul").hide().eq(index).show();
+
+      // 버튼 active
+      $(".easy-btn-container > div").removeClass("active");
+      $(".easy-btn-container > div").eq(index).addClass("active");
+
+      currentIndex = index;
+    }
+
+    updateView(0);
+
+    // 작은 동그라미 버튼 
+    $(".easy-btn-container > div").click(function() {
+      let idx = $(this).index();
+      updateView(idx);
+    });
+
+    // 왼쪽 버튼 클릭
+    $(".slide-btn1").click(function() {
+      let newIndex = (currentIndex - 1 + totalItems) % totalItems;
+      updateView(newIndex);
+    });
+
+    // 오른쪽 버튼 클릭
+    $(".slide-btn2").click(function() {
+      let newIndex = (currentIndex + 1) % totalItems;
+      updateView(newIndex);
+    });
+  });
+
+// 탑버튼
+            $(".top>h3").click(function(event) {
+        event.preventDefault();  // 기본 동작(링크 클릭)을 막음
+        $('html, body').stop().animate({scrollTop: 0}, 500);
+    });
+
+  // slide-img 
+  $(".easy-img img").hide().eq(0).show();
+  $(".easy-product > ul").hide().eq(0).show();
+
+  let current = 0;
+  const total = $(".easy-img img").length;
+
+  $(".slide-btn1").click(function () {
+    $(".easy-img img").eq(current).fadeOut(200);
+    $(".easy-product > ul").eq(current).hide();
+
+    current = (current - 1 + total) % total;
+
+    $(".easy-img img").eq(current).fadeIn(200);
+    $(".easy-product > ul").eq(current).show();
+  });
+
+  $(".slide-btn2").click(function () {
+    $(".easy-img img").eq(current).fadeOut(200);
+    $(".easy-product > ul").eq(current).hide();
+
+    current = (current + 1) % total;
+
+    $(".easy-img img").eq(current).fadeIn(200);
+    $(".easy-product > ul").eq(current).show();
+  });
+});
+    </script>
+</head>
+<body>
+
+<!-- 헤더시작 -->
+<div id="header" data-include="header.html"></div>
+<!-- 헤더 끝 -->
+
+    <div id="section">
+        <!-- hero부분 -->
+        <div class="hero">
+            <div class="bg-img"></div>
+            <div class="hero-wrap">
+                <h1 class="hero-title">
+                    아직도 5월<br> 
+                    이케아 무료배송💡
+                </h1>
+                <p class="hero-desc">
+                    딱 5월 한달 간! 이케아 제품 30만 원 이상 구매 시, 배송비가 무료에요!<br>
+                    전 온/오프라인 매장에서 누릴 수 있는 특별한 기회를 놓치지 마세요.<br>
+                    <br>
+                    <span>기간: 2025년 5월 1일 ~ 2025년 5월 31일, 한달간<br>
+                    대상: IKEA Family 멤버 & IKEA Business Network 멤버<br>
+                    비고: 본 행사는 5월 한달간 이케아 모든 매장, 이케아 공식 온라인몰,<br> 
+                    앱 그리고 헤이오더 전화주문(1670-4532)에서 진행됩니다.</span>
+                </p>
+                
+                <ul class="hero-button">
+                    <li class="hero-btn"><a href="#">더 알아보기</a></li>
+                    <li class="hero-btn2"><a href="#">구매하기</a></li>
+                </ul>
+            </div>
+
+            <div class="hero-view">
+                <div class="hero-img">
+                    <img src="images/main/hero1.png" alt="img1">
+                    <img src="images/main/hero2.png" alt="img2">
+                    <img src="images/main/hero3.png" alt="img3">
+                    <img src="images/main/hero4.png" alt="img4">
+                    <img src="images/main/hero5.png" alt="img5">
+                </div>
+
+                <div class="hero-btn-container">
+                    <div class="btn-container1"></div>
+                    <div class="btn-container2"></div>
+                    <div class="btn-container3"></div>
+                    <div class="btn-container4"></div>
+                    <div class="btn-container5"></div>
+                </div>
+            </div>
+        </div>
+
+            <!-- 이케아 미리보기 -->
+            <div class="preview">
+                <h2 class="preview-title">이케아 미리보기</h2>
+                <div class="preview-content">
+                    <ul class="prev1">
+                        <li><a href="#"><img src="images/main/pre1.png" alt="preview1"></a></li>
+                        <li><a href="#">여유롭게 하루를 시작하기 ☕️</a></li>
+                    </ul>
+                    <ul class="prev2">
+                        <li><a href="#"><img src="images/main/pre2.png" alt="preview2"></a></li>
+                        <li><a href="#">샤워공간에 서서 즐기는 스파 🚿</a></li>
+                    </ul>
+                    <ul class="prev3">
+                        <li><a href="#"><img src="images/main/pre3.png" alt="preview3"></a></li>
+                        <li><a href="#">외출은 잠시 미뤄보세요 📚</a></li>
+                    </ul>
+                    <ul class="prev4">
+                        <li><a href="#"><img src="images/main/pre4.png" alt="preview4"></a></li>
+                        <li><a href="#">다가오는 6월, 여름 맞이 인테리어 🌱</a></li>
+                    </ul>
+                </div>
+                <div class="preview-btn"><a>더 많은 컨셉</a></div>
+            </div>
+
+            <!-- hej -->
+            <div class="hej">
+                <h1 class="hej-title">Hej!</h1>
+                <h2 class="hej-desc">
+                    이케아만의<br>
+                    보다 더 다양한<br>
+                    이케아 서비스들을<br>
+                    만나보세요
+                </h2>  
+                <div class="hej-icon-container">
+                    <ul class="hej-icon1">
+                        <li><img src="images/main/search1.png" alt="icon1"></li>
+                        <li>픽업</li>
+                    </ul>
+                    <ul class="hej-icon2">
+                        <li><img src="images/main/search2.png" alt="icon2"></li>
+                        <li>설치</li>
+                    </ul>
+                    <ul class="hej-icon3">
+                        <li><img src="images/main/search3.png" alt="icon3"></li>
+                        <li>배송</li>
+                    </ul>
+                    <ul class="hej-icon4">
+                        <li><img src="images/main/search4.png" alt="icon4"></li>
+                        <li>조립</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 원하는상품 손쉽게 확인하기 -->
+            <div class="easy">
+                <div class="easy-wrap">
+                    <h2 class="easy-title">
+                        원하는 상품을<br>
+                        손쉽게 확인하기
+                    </h2>
+                    <ul class="easy-button">
+                        <li class="easy-btn"><a href="">더 알아보기</a></li>
+                        <li class="easy-btn2"><a href="">구매하기</a></li>
+                    </ul>
+                </div>
+
+                <div class="easy-view">
+                    <div class="easy-img">
+                        <img src="images/main/easy1.png" alt="img1">
+                        <img src="images/main/easy2.png" alt="img2">
+                        <img src="images/main/easy3.png" alt="img3">
+                        <img src="images/main/easy4.png" alt="img4">
+                    </div>
+
+                    <div class="easy-btn-container">
+                        <div class="btn-container1"></div>
+                        <div class="btn-container2"></div>
+                        <div class="btn-container3"></div>
+                        <div class="btn-container4"></div>
+                    </div>
+                </div>
+                
+                <div class="easy-product">
+                    <ul class="easy-product1">
+                        <li class="product-name">
+                            TOSSBERG 토스베리 /<br>
+                            LANGFJALL 롱피엘
+                        </li>
+                        <li class="product-price">￦ 237,000원 부터</li>
+                        <li class="product-desc">
+                            시트 형태가 유지되는 고탄성 폼으로 구성되어 있고<br>
+                            공기가 순환하는 구조여서 편안한 착석감을 제공합니다.<br>
+                            <br>
+                            바퀴가 잠금 메커니즘을 갖추고 있어 일어나면 안전하게<br>
+                            고정되고, 앉으면 자동으로 잠금이 해제됩니다.<br>
+                            <br>
+                            기울임 강도 조절장치는 체중과 움직임에 앨런 렌치로<br>
+                            쉽게 조절할 수 있으므로 완벽한 균형을 유지하면서 몸을<br>
+                            뒤로 기댈 수 있습니다.<br>
+                            <br>
+                            듣받이와 의자 곡선 형태는 척추 아랫부분을 충실하게<br>
+                            받쳐주며 등이 피로해지는 것을 방지해줍니다. 편안하고<br>
+                            이완된 자세로 더 오랫동안 앉아 있을 수 있습니다.
+                        </li>
+                    </ul>
+                    <ul class="easy-product2">
+                        <li class="product-name">
+                            ALEFJÄLL 알레피엘<br>
+                            사무용의자, 그란 베이지
+                        </li>
+                        <li class="product-price">￦ 249,000원 부터</li>
+                        <li class="product-desc">
+                            인체공학적 사무용 의자에는 여러 가지 기능이 있어 쉽게<br>
+                            몸에 맞춰 의자를 조절할 수 있습니다.<br>
+                            <br>
+                            자동으로 각도 조절이 가능하여 체중에 따라 등받이가<br>
+                            젖혀지는 강도가 달라집니다.<br>
+                            <br>
+                            시트 깊이를 조절하여 등받이로 몸에 맞게 지지할 수 있고<br>
+                            시트 쿠션 전체에서 체중이 고르게 분산됩니다.<br>
+                            <br>
+                            GRANN 그란 커버는 최상급 가죽인 그레인 가죽으로<br>
+                            만들었어요. 사용할수록 부드러워지고 색이 진해지며 의자에<br>
+                            아무도 앉아 있지 않으면 바퀴가 잠기고 일어나면<br>
+                            안전하게 고정됩니다.
+                        </li>
+                    </ul>
+                    <ul class="easy-product3">
+                        <li class="product-name"> 
+                            DJUNGELSKOG 융엘스코그
+                            봉제인형, 오랑우탄
+                        </li>
+                        <li class="product-price">￦ 12,900원 부터</li>
+                        <li class="product-desc">
+                            부드럽고 근사한 이 오랑우탄에게는 사람과 마찬가지로<br> 
+                            안전한 집과 따뜻한 사랑이 필요해요.<br>
+                            <br>
+                            아이가 모험의 세계로 떠날 때 뒤에 앉아 있거나 노는 걸<br>
+                            좋아한답니다.<br>
+                            <br>
+                            선반에 매달아도 되고, 내 허리나 가방 손잡이에 두를 수 <br>
+                            있습니다. 오랑우탄의 손과 발에 있는 벨크로 덕분이죠.<br>
+                            <br>
+                            이케아 봉제인형은 포옹과 놀이, 장난을 좋아하고<br>
+                            포근하며 이야기도 잘 들어줍니다.<br>
+                            <br>
+                            안전성 테스트를 통과한 믿을 수 있는 제품입니다.</li>
+                    </ul>
+                    <ul class="easy-product4">
+                        <li class="product-name">
+                            AFTONSPARV 아프톤스파르브<br>
+                            우주비행사봉제인형, 고양이, 28 cm
+                        </li>
+                        <li class="product-price">￦ 14,900원 부터</li>
+                        <li class="product-desc">
+                            놀이 시간에는 봉제인형에 옷을 입혀서 놀고, <br>
+                            탐험이 끝나면 우주복을 깨끗하게 빨아 입힐 수 있어요.<br>
+                            <br>
+                            100% 재생 폴리에스테르로 제작되어 민감한 피부에도 <br>
+                            부드러워요.<br>
+                            <br>
+                            우주선에서 영감을 얻은 컬렉션의 장난감을 통해 <br>
+                            아이들의 호기심을 자극하고 창의력을 일깨워 주세요.<br>
+                            <br>
+                            이케아의 인형은 오래도록 곁에서 사랑을 받아야 해요.<br>
+                            그래서 이케아는 포근한 소재를 선택하고, 눈은 자수로<br>
+                            놓고, 엄격한 테스트를 거치고, 화학 물질이 없는지<br>
+                            확인했습니다. </li>
+                    </ul>
+                </div>
+                <div class="slide-controls">
+    <img src="images/main/chevron_left_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="left" class="slide-btn1">
+    <img src="images/main/chevron_right_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="right" class="slide-btn2">
+</div>
+            </div>
+
+                <!-- 이케아의 새로운소식 -->
+                <div class="news">
+                    <div class="news-wrap">
+                        <h2 class="news-title">
+                            이케아의<br>
+                            새로운소식!<br>
+                            지금바로가기
+                        </h2>
+                        <div class="news-btn"><a>새로운소식 바로가기</a></div>
+                    </div>
+
+                    <div class="news-content">
+                        <ul class="news-content1">
+                            <li><a href="#">
+                                지구의 달 4월 🌎<br>
+                                이케아와 함께하는<br>
+                                지속가능한 선택
+                            </a></li>
+                            <li><a href="#">더보기</a></li>
+                        </ul>
+                        <ul class="news-content2">
+                            <li><a href="#">
+                                2025 ⏱️<br>
+                                이달의 신제품으로<br>
+                                기분 좋은 순간 로딩중
+                            </a></li>
+                            <li><a href="#">더보기</a></li>
+                        </ul>
+                        <ul class="news-content3">
+                            <li><a href="#">
+                                닫는순간! ❄<br>
+                                눈처럼 쌓이는<br>
+                                시원함
+                            </a></li>
+                            <li><a href="#">더보기</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 이번달에만 특별한 가격 -->
+                <div class="special">
+                    <div class="special-content">
+                        <div class="special-content-left">
+                            <div class="special-item">
+                                <img src="images/main/special1.png" alt="special-img1">
+                                <div class="special-btn-mini1"><a href="ikea_special.html">구매하기</a></div>
+                            </div>
+                            <div class="special-item">
+                                <img src="images/main/special2.png" alt="special-img2">
+                                <div class="special-btn-mini2"><a href="ikea_special.html">구매하기</a></div>
+                            </div>
+                        </div>
+                        <div class="special-content-right">
+                            <div class="special-item2">
+                                <img src="images/main/special3.png" alt="special-img3">
+                                <div class="special-btn-mini3"><a href="ikea_special.html">구매하기</a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="special-wrap">
+                        <h2>
+                            이번달에만<br>
+                            특별한 가격!
+                        </h2>
+                        <div class="special-btn"><a href="ikea_special.html">특별한 가격 보러가기</a></div>
+                    </div>
+                </div>
+
+               <div class="idea">
+  <div class="idea-wrap">
+    <h1 class="idea-title">
+      주제별<br>
+      아이디어<br>
+      갤러리
+    </h1>
+    <div class="idea-btn"><a href="#">아이디어 전시 보러가기</a></div>
+  </div>
+
+  <div class="idea-content">
+    <div class="idea-cont">
+      <ul class="idea-item idea1">
+        <li><a href="ikea_idea.html"><img src="images/main/idea1.png" alt="idea-img1"></a></li>
+        <li><a href="ikea_idea.html">아이방&인형</a></li>
+      </ul>
+    </div>
+    <div class="idea-right">
+      <div class="idea-content2-1">
+        <ul class="idea-item idea2">
+          <li><a href="ikea_idea.html"><img src="images/main/idea2.png" alt="idea-img2"></a></li>
+          <li><a href="ikea_idea.html">화장실</a></li>
+        </ul>
+        <ul class="idea-item idea3">
+          <li><a href="ikea_idea.html"><img src="images/main/idea3.png" alt="idea-img3"></a></li>
+          <li><a href="ikea_idea.html">주방</a></li>
+        </ul>
+      </div>
+      <div class="idea-content2-2">
+        <ul class="idea-item idea4">
+          <li><a href="ikea_idea.html"><img src="images/main/idea4.png" alt="idea-img4"></a></li>
+          <li><a href="ikea_idea.html">침실</a></li>
+        </ul>
+        <ul class="idea-item idea5">
+          <li><a href="ikea_idea.html"><img src="images/main/idea5.png" alt="idea-img5"></a></li>
+          <li><a href="ikea_idea.html">데코</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+                </div>
+
+
+
+
+
+                <div class="top">
+
+                  <h3><a href="#">TOP</a></h3>
+                </div>
+
+
+
+
+
+            
+
+
+
+
+    </div>
+    <div id="footer" data-include="footer.html"></div>
+
+  <script>
+  let slider = document.querySelector(".news-content");
+  let innerSlider = document.querySelector(".news-content1");
+  let pressed = false;
+  let startx;
+  let x;
+
+  innerSlider.style.left = "0px";
+
+  slider.addEventListener("mousedown", e => {
+    pressed = true;
+    startx = e.offsetX - innerSlider.offsetLeft;
+    slider.style.cursor = "grabbing";
+  });
+
+  slider.addEventListener("mouseenter", () => {
+    slider.style.cursor = "grab";
+  });
+
+  slider.addEventListener("mouseup", () => {
+    pressed = false;
+    slider.style.cursor = "grab";
+  });
+
+  window.addEventListener("mouseup", () => {
+    pressed = false;
+  });
+
+  slider.addEventListener("mousemove", e => {
+    if (!pressed) return;
+    e.preventDefault();
+    x = e.offsetX;
+    innerSlider.style.left = `${x - startx}px`;
+    checkBoundary();
+  });
+
+  function checkBoundary() {
+    const outer = slider.getBoundingClientRect();
+    const inner = innerSlider.getBoundingClientRect();
+
+    if (parseInt(innerSlider.style.left) > 0) {
+      innerSlider.style.left = "0px";
+    } else if (inner.right < outer.right) {
+      innerSlider.style.left = `-${inner.width - outer.width}px`;
+    }
+  }
+</script>
+</body>
+</html>

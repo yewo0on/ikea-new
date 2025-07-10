@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이케아/리뉴얼</title>
+  <link rel="stylesheet" href="css/ikea_idea.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon" />
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="js/include.js" defer></script>
+  <script>
+  $(document).ready(function(){
+      
+      setInterval(fnSlide, 3000);
+
+        function fnSlide() {
+              // 리스트 슬라이드
+
+          $(".sec6_img").animate({ "margin-left": "-440px" }, 1500, function () {
+            $(".sec6_img").css({ "margin-left": "-10px" });
+            $(".sec6_img>li:first-child").insertAfter(".sec6_img>li:last-child");
+        });
+      };
+    });
+  </script>
+</head>
+<body>
+  <div id="header" data-include="header.html"></div>
+  <div id="section">
+    <div class="main">
+      <h1>영감 & idea</h1>
+      <p>영감을 주는 다양한 콘텐츠와 홈퍼니싱 아이디어를 살펴보고, 나에게 필요한 솔루션을 찾아보세요.</p>
+    </div>
+    <div class="sec1">
+      <h2>공간별 아이디어</h2>
+      <P>IKEA 제품으로 꾸며진 다양한 공간에서 영감을 얻어보세요.</p>
+      <ul class="sec1_img1">
+        <li><a href="#">거실</a></li>
+        <li><a href="#">침실</a></li>
+        <li class="prev"><a href="#"></a></li>
+      </ul>
+      <ul class="sec1_img2">
+        <li class="next"><a href="#"></a></li>
+        <li><a href="#">주방</a></li>
+        <li><a href="#">아이방</a></li>
+      </ul>
+    </div>
+    <div class="sec2">
+      <h2>더 나은 일상을 위한 수납</h2>
+      <p>더 많은 침실 수납 솔루션 보러 가기</p>
+      <ul class="sec2_img">
+        <li>
+          <div class="black_bg">
+            <a href="#">침대협탁</a>
+          </div>
+        </li>
+        <li>
+          <div class="black_bg">
+            <a href="#">옷장</a>
+          </div>
+        </li>
+        <li>
+          <div class="black_bg">
+            <a href="#">수납형 침대</a>
+          </div>
+        </li>
+        <li>
+          <div class="black_bg">
+            <a href="#">서랍장</a>
+          </div>
+        </li>
+        <li>
+          <div class="black_bg">
+            <a href="#">의류정리용품</a>
+          </div> 
+        </li>
+      </ul>
+      <div class="line2"></div>
+    </div>
+    <div class="sec3">
+      <ul class="sec3_txt">
+        <li>
+          <h1>
+            전 세계인이 함께하는<br>
+            <span class="txt3">멤버십 IKEA Family.</span>
+          </h1>
+        </li>
+        <li>
+          IKEA Family 멤버십으로 특별한 가격, 깜짝 선물, 무료 워크숍과 이벤트 등의 다양한 혜택 까지!<br>
+          <span class="txt3_1">지금 전 세계 고객과 함께하는 IKEA Family에 가입하고 이 모든 혜택을 받아보세요!</span>
+        </li>
+      </ul>
+      <div class="sec3_img"><img src="images/idea/sec3.png" alt="이케아캐릭터"></div>
+    </div>
+    <div class="sec4">
+      <h2>홈퍼니싱 스타일</h2>
+      <P>나에게 어울리는 스타일 찾기</p>
+      <ul class="sec4_img">
+        <li>
+          <div class="from_bg">
+            <a href="#">모던스타일</a>
+          </div> 
+        <li>
+          <div class="from_bg">
+            <a href="#">클래식스타일</a>
+          </div> 
+        </li>
+        <li>
+          <div class="from_bg">
+            <a href="#">북유럽스타일</a>
+          </div> 
+        </li>
+        <li>
+          <div class="from_bg">
+            <a href="#">팜하우스스타일</a>
+          </div>
+        </li>
+        <li>
+          <div class="from_bg">
+            <a href="#">보헤미안스타일</a>
+          </div> 
+        </li>
+      </ul>
+    </div>
+    <div class="sec5">
+      <ul class="sec5_txt">
+        <li>
+          <ul class="sub5">
+            <li><img src="images/idea/sec5_1.png" alt="플래너"></li>
+            <li><a href="#">온라인 플래너</a></li>
+            <li><a href="#">온라인 플래닝 툴을 이용해 다음 구매를 미리 계획해보세요.<br>
+              자세히 보기</a></li>
+          </ul> 
+        </li>
+        <li>
+          <ul class="sub5">
+            <li><img src="images/idea/sec5_2.png" alt="공간"></li>
+            <li><a href="#">공간 스타일링 서비스</a></li>
+            <li><a href="#">인테리어 디자이너가 여러분의 꿈을 이루도록 도와드려요.<br>
+              자세히 보기</a></li>
+          </ul> 
+        </li>
+        <li>
+          <ul class="sub5">
+            <li><img src="images/idea/sec5_3.png" alt="픽업"></li>
+            <li><a href="#">매장 픽업 서비스</a></li>
+            <li><a href="#">매장 픽업 서비스를 이용해 매장에서 주문 상품을 픽업하세요.<br>
+              자세히 보기</a></li>
+          </ul> 
+        </li>
+      </ul>
+    </div>
+    <div class="sec6">
+      <h2># 이케아로 꾸민 우리집</h2>
+      <P>인스타그램 속 IKEA 제품을 확인해 보세요! #이케아로꾸민우리집 혹은 @ikeakr 태그를 통해 이미지를 업로드 하면 이곳에서 볼 수 있어요!</p>
+      <div class="sec6_box">
+        <ul class="sec6_img">
+          <li>
+            <div class="sec6_2"><img src="images/idea/sec6_1.png" alt="이미지1"></div>
+            <div class="sec6_3"><img src="images/idea/sec6.png" alt="틀"></div>
+            <ul class="ins">
+              <li class="icon"><img src="images/idea/sec6_icon.png" alt="아이콘"></li>
+              <li><a href="#">#3</a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="sec6_2"><img src="images/idea/sec6_2.png" alt="이미지1"></div>
+            <div class="sec6_3"><img src="images/idea/sec6.png" alt="틀"></div>
+            <ul class="ins">
+              <li class="icon"><img src="images/idea/sec6_icon.png" alt="아이콘"></li>
+              <li><a href="#">#8</a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="sec6_2"><img src="images/idea/sec6_3.png" alt="이미지1"></div>
+            <div class="sec6_3"><img src="images/idea/sec6.png" alt="틀"></div>
+            <ul class="ins">
+              <li class="icon"><img src="images/idea/sec6_icon.png" alt="아이콘"></li>
+              <li><a href="#">#6</a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="sec6_2"><img src="images/idea/sec6_4.png" alt="이미지1"></div>
+            <div class="sec6_3"><img src="images/idea/sec6.png" alt="틀"></div>
+            <ul class="ins">
+              <li class="icon"><img src="images/idea/sec6_icon.png" alt="아이콘"></li>
+              <li><a href="#">#3</a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="sec6_2"><img src="images/idea/sec6_5.png" alt="이미지1"></div>
+            <div class="sec6_3"><img src="images/idea/sec6.png" alt="틀"></div>
+            <ul class="ins">
+              <li class="icon"><img src="images/idea/sec6_icon.png" alt="아이콘"></li>
+              <li><a href="#">#2</a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="sec6_2"><img src="images/idea/sec6_6.png" alt="이미지1"></div>
+            <div class="sec6_3"><img src="images/idea/sec6.png" alt="틀"></div>
+            <ul class="ins">
+              <li class="icon"><img src="images/idea/sec6_icon.png" alt="아이콘"></li>
+              <li><a href="#">#2</a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="sec6_2"><img src="images/idea/sec6_7.png" alt="이미지1"></div>
+            <div class="sec6_3"><img src="images/idea/sec6.png" alt="틀"></div>
+            <ul class="ins">
+              <li class="icon"><img src="images/idea/sec6_icon.png" alt="아이콘"></li>
+              <li><a href="#">#1</a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="sec6_2"><img src="images/idea/sec6_8.png" alt="이미지1"></div>
+            <div class="sec6_3"><img src="images/idea/sec6.png" alt="틀"></div>
+            <ul class="ins">
+              <li class="icon"><img src="images/idea/sec6_icon.png" alt="아이콘"></li>
+              <li><a href="#">#3</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="sec6_line"></div>
+    </div>
+  </div>
+  <div id="footer" data-include="footer.html"></div>
+</body>
+</html>

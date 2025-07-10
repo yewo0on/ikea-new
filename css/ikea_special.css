@@ -1,0 +1,443 @@
+@charset "UTF-8";
+
+/* reset css */
+* {
+  margin: 0; padding: 0;
+  cursor: url(https://cur.cursors-4u.net/nature/nat-2/nat120.cur), auto;
+}
+body {
+  font-family: 'Pretendard', sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-use-select: none;
+  user-select: none;
+}
+ul { list-style: none; }
+a { color: #000; text-decoration: none; display: block; }
+img { border: 0; vertical-align: top; }
+
+/* button 기본 스타일 초기화 */
+button { background: inherit; border:none; box-shadow:none;
+  font-family: 'Pretendard-Regular';
+  border-radius:0; padding:0; overflow:visible; cursor:pointer; }
+
+/* input 기본 스타일 초기화 */
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+}
+/* IE10 이상에서 input box 에 추가된 지우기 버튼 제거 */
+input::-ms-clear { display: none; }
+
+/* 공통 css */
+main .main_wrap {
+  padding: 0px 130px;
+}
+main .main_tit {
+  font-size: 43px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+main .main_desc {
+  font-size: 19px;
+  font-weight: 400;
+}
+/* banner */
+main #banner {
+  background-color: #F1F7ED;
+  width: 100%; height: 650px;
+  text-align: center;
+  padding: 50px 0px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+main #banner .carousel {
+  width: 65%; height: 100%;
+  margin: 0 auto;
+}
+.slider-nav {
+  width: 100%; height: 65%;
+}
+.slider-for {
+  width: 100%; height: 35%;
+  display: flex; align-items: center;
+}
+.slick-prev::before,
+.slick-next::before {
+  color: #999;
+  font-size: 30px;
+}
+/* banner - slides */
+main .carousel .slider-nav .slide {
+  display: flex; justify-content: space-around;
+}
+main .carousel .slider-nav .slide .banner_img {
+  width: 250px;
+  border-radius: 20px;
+  border: 3px solid transparent;
+  cursor: pointer;
+}
+main .carousel .slider-nav .slide .banner_img:hover {
+  border: 2px solid #111;
+}
+/* banner - slide_txt */
+main #banner .slide_txt {
+  width: 100%;
+  height: 150px;
+}
+main #banner .slide_txt .earth_icon .earth_img {
+  width: 130px;
+  margin: 0px 55px;
+}
+main #banner .slide_txt:hover .earth_img {
+  animation: rotate 1.5s infinite linear;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(14deg);
+  }
+  75% {
+    transform: rotate(-14deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+main #banner .txt_left {
+  width: 100%;
+  text-align: right;
+}
+main #banner .txt_right {
+  width: 100%;
+  text-align: left;
+}
+main #banner .slide_txt { display: flex; align-items: center; margin: 0 auto; }
+main #banner .slide_txt .txt_left .tit { font-weight: 700; font-size: 28px; }
+main #banner .slide_txt1 .txt_left .tit { color: #CA3F3F; }
+main #banner .slide_txt2 .txt_left .tit { color: #dfb22e; }
+main #banner .slide_txt3 .txt_left .tit { color: #4D8B30; }
+main #banner .slide_txt4 .txt_left .tit { color: #8F38B2; }
+main #banner .slide_txt5 .txt_left .tit { color: #1e5303; }
+main #banner .slide_txt .txt_right .tit { color: #32596D; font-weight: 800; font-size: 26px; }
+main #banner .slide_txt .desc { width: 100%; font-size: 18px; margin-top: 13px; line-height: 26px; }
+
+/* ikea family */
+main #ikeaFamily {
+  margin-top: 150px; /* 섹션 간격 */
+}
+/* ikea family - category */
+main #ikeaFamily .category {
+  width: 98%;
+  display: flex;
+  justify-content: space-between;
+  margin: 50px auto;
+}
+main #ikeaFamily .more,
+main #ikeaFamily .category > li {
+  display: flex;  align-items: center; justify-content: center;
+  font-size: 17px;
+  background-color: #D9D9D9;
+  width: 170px; height: 45px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 300;
+}
+main #ikeaFamily .category > li:hover,
+main #ikeaFamily .category > li.on { background-color: #FFCF4B; }
+
+main #ikeaFamily .more_wrap {
+  margin-top: 50px;
+  display: flex; justify-content: center;
+}
+main #ikeaFamily .more {
+  font-size: 17px;
+  font-weight: 400;
+  background-color: #FFCF4B;
+  width: 200px; height: 45px;
+}
+main #ikeaFamily .more:hover {
+  background-color: #f8b600;
+}
+
+/* ikea family - product */
+main #ikeaFamily .if_products {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  display: none;
+}
+main #ikeaFamily .if_products.on {
+  display: block;
+}
+main #ikeaFamily .pd_top,
+main #ikeaFamily .pd_bt {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+main #ikeaFamily .pd_top { margin-bottom: 20px; }
+main #ikeaFamily .product {
+  height: 400px;
+  border-radius: 10px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  position: relative;
+}
+
+main #ikeaFamily .if_products1 .product1 { width: 35%; background-image: url(../images/ikea_special/product1_1.png); }
+main #ikeaFamily .if_products1 .product2 { width: 25%; background-image: url(../images/ikea_special/product1_2.jpg); }
+main #ikeaFamily .if_products1 .product3 { width: 35%; background-image: url(../images/ikea_special/product1_3.jpg); }
+main #ikeaFamily .if_products1 .product4 { width: 29%; background-image: url(../images/ikea_special/product1_4.png); }
+main #ikeaFamily .if_products1 .product5 { width: 37%; background-image: url(../images/ikea_special/product1_5.jpg); }
+main #ikeaFamily .if_products1 .product6 { width: 29%; background-image: url(../images/ikea_special/product1_6.webp); }
+
+main #ikeaFamily .if_products2 .product1 { width: 35%; background-image: url(../images/ikea_special/product2_1.jpg); }
+main #ikeaFamily .if_products2 .product2 { width: 25%; background-image: url(../images/ikea_special/product2_2.jpg); }
+main #ikeaFamily .if_products2 .product3 { width: 35%; background-image: url(../images/ikea_special/product2_3.webp); }
+main #ikeaFamily .if_products2 .product4 { width: 29%; background-image: url(../images/ikea_special/product2_4.jpg); }
+main #ikeaFamily .if_products2 .product5 { width: 37%; background-image: url(../images/ikea_special/product2_5.jpg); }
+main #ikeaFamily .if_products2 .product6 { width: 29%; background-image: url(../images/ikea_special/product2_6.jpg); }
+
+main #ikeaFamily .if_products3 .product1 { width: 35%; background-image: url(../images/ikea_special/product1_1.png); }
+main #ikeaFamily .if_products3 .product2 { width: 25%; background-image: url(../images/ikea_special/product1_2.jpg); }
+main #ikeaFamily .if_products3 .product3 { width: 35%; background-image: url(../images/ikea_special/product1_3.jpg); }
+main #ikeaFamily .if_products3 .product4 { width: 29%; background-image: url(../images/ikea_special/product1_4.png); }
+main #ikeaFamily .if_products3 .product5 { width: 37%; background-image: url(../images/ikea_special/product1_5.jpg); }
+main #ikeaFamily .if_products3 .product6 { width: 29%; background-image: url(../images/ikea_special/product1_6.webp); }
+
+main #ikeaFamily .if_products4 .product1 { width: 35%; background-image: url(../images/ikea_special/product2_1.jpg); }
+main #ikeaFamily .if_products4 .product2 { width: 25%; background-image: url(../images/ikea_special/product2_2.jpg); }
+main #ikeaFamily .if_products4 .product3 { width: 35%; background-image: url(../images/ikea_special/product2_3.webp); }
+main #ikeaFamily .if_products4 .product4 { width: 29%; background-image: url(../images/ikea_special/product2_4.jpg); }
+main #ikeaFamily .if_products4 .product5 { width: 37%; background-image: url(../images/ikea_special/product2_5.jpg); }
+main #ikeaFamily .if_products4 .product6 { width: 29%; background-image: url(../images/ikea_special/product2_6.jpg); }
+
+main #ikeaFamily .if_products5 .product1 { width: 35%; background-image: url(../images/ikea_special/product1_1.png); }
+main #ikeaFamily .if_products5 .product2 { width: 25%; background-image: url(../images/ikea_special/product1_2.jpg); }
+main #ikeaFamily .if_products5 .product3 { width: 35%; background-image: url(../images/ikea_special/product1_3.jpg); }
+main #ikeaFamily .if_products5 .product4 { width: 29%; background-image: url(../images/ikea_special/product1_4.png); }
+main #ikeaFamily .if_products5 .product5 { width: 37%; background-image: url(../images/ikea_special/product1_5.jpg); }
+main #ikeaFamily .if_products5 .product6 { width: 29%; background-image: url(../images/ikea_special/product1_6.webp); }
+
+main #ikeaFamily .if_products6 .product1 { width: 35%; background-image: url(../images/ikea_special/product2_1.jpg); }
+main #ikeaFamily .if_products6 .product2 { width: 25%; background-image: url(../images/ikea_special/product2_2.jpg); }
+main #ikeaFamily .if_products6 .product3 { width: 35%; background-image: url(../images/ikea_special/product2_3.webp); }
+main #ikeaFamily .if_products6 .product4 { width: 29%; background-image: url(../images/ikea_special/product2_4.jpg); }
+main #ikeaFamily .if_products6 .product5 { width: 37%; background-image: url(../images/ikea_special/product2_5.jpg); }
+main #ikeaFamily .if_products6 .product6 { width: 29%; background-image: url(../images/ikea_special/product2_6.jpg); }
+
+main #ikeaFamily .if_products7 .product1 { width: 35%; background-image: url(../images/ikea_special/product1_1.png); }
+main #ikeaFamily .if_products7 .product2 { width: 25%; background-image: url(../images/ikea_special/product1_2.jpg); }
+main #ikeaFamily .if_products7 .product3 { width: 35%; background-image: url(../images/ikea_special/product1_3.jpg); }
+main #ikeaFamily .if_products7 .product4 { width: 29%; background-image: url(../images/ikea_special/product1_4.png); }
+main #ikeaFamily .if_products7 .product5 { width: 37%; background-image: url(../images/ikea_special/product1_5.jpg); }
+main #ikeaFamily .if_products7 .product6 { width: 29%; background-image: url(../images/ikea_special/product1_6.webp); }
+
+main #ikeaFamily .if_products8 .product1 { width: 35%; background-image: url(../images/ikea_special/product2_1.jpg); }
+main #ikeaFamily .if_products8 .product2 { width: 25%; background-image: url(../images/ikea_special/product2_2.jpg); }
+main #ikeaFamily .if_products8 .product3 { width: 35%; background-image: url(../images/ikea_special/product2_3.webp); }
+main #ikeaFamily .if_products8 .product4 { width: 29%; background-image: url(../images/ikea_special/product2_4.jpg); }
+main #ikeaFamily .if_products8 .product5 { width: 37%; background-image: url(../images/ikea_special/product2_5.jpg); }
+main #ikeaFamily .if_products8 .product6 { width: 29%; background-image: url(../images/ikea_special/product2_6.jpg); }
+
+main #ikeaFamily .product .info {
+  height: 200px;
+  padding: 15px; box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 20px;
+  position: absolute; right: 20px; bottom: 20px;
+  opacity: 0;
+  transition: all 0.3s;
+}
+main #ikeaFamily .product .info > h2 { font-size: 14px; color: #4D8B30; margin-top: 15px; margin-bottom: 20px;}
+main #ikeaFamily .product .info .pd_name { font-size: 18px; }
+main #ikeaFamily .product .info .desc { font-size: 13px; }
+main #ikeaFamily .product .info .d_price { font-size: 18px; font-weight: 500; margin-top: 20px; }
+main #ikeaFamily .product .info .r_price { font-size: 13px; margin-top: 3px;}
+main #ikeaFamily .product:hover .info { opacity: 0.9; }
+
+/* lowerPrice */
+main #lowerPrice {
+  margin-top: 200px; /* 섹션 간격 */
+  position: relative;
+}
+main #lowerPrice .content {
+  width: 100%; height: 350px;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+main #lowerPrice .more {
+  width: 220px; height: 220px;
+  background-color: #86BA6E;
+  border-radius: 50%;
+  text-align: center;
+  padding: 60px 0px; box-sizing: border-box;
+  cursor: pointer;
+}
+main #lowerPrice .content > a { display: block; }
+main #lowerPrice .more:hover {
+  background-color: #7cad65;
+}
+main #lowerPrice .more .txt1 {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+main #lowerPrice .more .txt2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+main #lowerPrice .more .txt3 {
+  font-size: 16px;
+  display: flex; align-items: center;
+  justify-content: center;
+}
+main #lowerPrice .more .txt3 .more_arrow {
+  font-size: 20px;
+  padding-left: 3px;
+}
+
+/* lowerPrice - lp_slider */
+main #lowerPrice .lp_slider {
+  position: absolute; right: 30px;
+  width: 80%; height: 100%;
+  overflow: hidden;
+}
+
+main #lowerPrice .slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px; height: 60px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 11px;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 10;
+  display: none; /* 기본은 숨김 */
+}
+main #lowerPrice .left-arrow { left: 265px; }
+main #lowerPrice .right-arrow { right: 0px; }
+
+main #lowerPrice .lp_slider .custom-scrollbar {
+  height: 5px;
+  background: #eee;
+  position: absolute;
+  top: 335px; left: 0; right: 0;
+  border-radius: 20px;
+  position: relative;
+  display: flex; align-items: center;
+}
+main #lowerPrice .lp_slider .scroll-thumb {
+  width: 100px; height: 105%;
+  background: #111;
+  position: absolute;
+  left: 0; bottom: 0; right: 0;
+  transition: left 0.1s ease-out;
+  cursor: grab;
+  z-index: 100;
+  position: relative;
+  border-radius: 20px;
+  transition: all 3s ease;
+}
+main #lowerPrice .lp_slider .scroll-thumb:active {
+  height: 150%;
+  cursor: grabbing;
+}
+
+main #lowerPrice .lp_slider .slider-inner {
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 90%; width: 240%;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 5px;
+  align-items: center;
+  transition: all 3s ease;
+  /* pointer-events: none; */
+}
+main #lowerPrice .lp_slider .slider-inner .slider-item {
+  width: 100%; height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+main #lowerPrice .lp_slider .slider-inner .slider-item > a {
+  width: 100%; height: 100%;
+  display: block;
+}
+
+main #lowerPrice .product1 { background-image: url(../images/ikea_special/lower_price1.jpg); }
+main #lowerPrice .product2 { background-image: url(../images/ikea_special/lower_price2.jpg); }
+main #lowerPrice .product3 { background-image: url(../images/ikea_special/lower_price3.jpg); }
+main #lowerPrice .product4 { background-image: url(../images/ikea_special/lower_price4.jpg); }
+main #lowerPrice .product5 { background-image: url(../images/ikea_special/lower_price5.jpg); }
+main #lowerPrice .product6 { background-image: url(../images/ikea_special/lower_price6.jpg); }
+main #lowerPrice .product7 { background-image: url(../images/ikea_special/lower_price7.jpg); }
+main #lowerPrice .product8 { background-image: url(../images/ikea_special/lower_price8.jpg); }
+main #lowerPrice .product9 { background-image: url(../images/ikea_special/lower_price9.jpg); }
+main #lowerPrice .product10 { background-image: url(../images/ikea_special/lower_price10.jpg); }
+
+main #lowerPrice .product1:hover { background-image: url(../images/ikea_special/lower_price_h_1.jpg); }
+main #lowerPrice .product2:hover { background-image: url(../images/ikea_special/lower_price_h_2.jpg); }
+main #lowerPrice .product3:hover { background-image: url(../images/ikea_special/lower_price_h_3.jpg); }
+main #lowerPrice .product4:hover { background-image: url(../images/ikea_special/lower_price_h_4.jpg); }
+main #lowerPrice .product5:hover { background-image: url(../images/ikea_special/lower_price_h_5.jpg); }
+main #lowerPrice .product6:hover { background-image: url(../images/ikea_special/lower_price_h_6.jpg); }
+main #lowerPrice .product7:hover { background-image: url(../images/ikea_special/lower_price_h_7.jpg); }
+main #lowerPrice .product8:hover { background-image: url(../images/ikea_special/lower_price_h_8.jpg); }
+main #lowerPrice .product9:hover { background-image: url(../images/ikea_special/lower_price_h_9.jpg); }
+main #lowerPrice .product10:hover { background-image: url(../images/ikea_special/lower_price_h_10.jpg); }
+/* ...lp_slider */
+
+/* specialEvent */
+main #specialEvent {
+  margin-top: 200px; /* 섹션 간격 */
+}
+main #specialEvent .events {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+main #specialEvent .events > li {
+  width: 31%; height: 700px;
+  background-color: #D9E1D5;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+main #specialEvent .events .event_img { width: 100%; height: 420px; overflow: hidden; } 
+main #specialEvent .events .event_img > img { width: 100%; transition: 0.4s; }
+main #specialEvent .events > li:hover .event_img > img { transform: scale(1.1); }
+
+main #specialEvent .events .txt { padding: 0px 30px; padding-top: 30px; box-sizing: border-box; }
+main #specialEvent .events .txt .tit { font-size: 22px; font-weight: 500; }
+main #specialEvent .events .txt .desc { font-size: 17px; margin-top: 20px; line-height: 25px; }
+main #specialEvent .events .txt .more {
+  width: 160px; height: 40px;
+  font-size: 15px;
+  border-radius: 20px;
+  background-color: #fff;
+  position: absolute; left: 25px; bottom: 25px;
+}
+main #specialEvent .events .txt .more:hover {
+  background-color: #000;
+}
+main #specialEvent .events .txt .more:hover > a {
+  color: #fff;
+}
